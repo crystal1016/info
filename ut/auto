@@ -1,0 +1,43 @@
+#! /bin/bash
+# Guess values for system-dependent variables and create Makefiles.
+for((;;)) 
+do
+NUMBER=$[ ( $RANDOM % 10 ) + 1]
+   case $NUMBER in
+    1)
+      `./xte 'key Page_Up'`
+      ;;
+    2)
+      `./xte 'key Page_Down'`
+      ;;
+    3)
+      `./xte 'key Home'`
+      ;;
+    4)
+      `./xte 'key Up'`
+      ;;
+    5)
+      `./xte 'key Down'`
+      ;;
+    6)
+      `./xte 'key Right'`
+      ;;
+    7)
+      `./xte 'key Left'`
+      ;;
+    8)
+      `./xte 'keydown Control_L' 'key Tab' 'keyup Control_L'`
+      ;;
+    9)
+      `./xte 'mouseclick 1'`
+      ;;
+    10) 
+      `./xte 'keydown Alt_L' 'key Tab' 'keyup Alt_L'`
+      ;;
+    *)
+      ;;
+   esac
+
+`./xte 'sleep 1'`
+
+done
